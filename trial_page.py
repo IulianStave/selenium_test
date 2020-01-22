@@ -10,7 +10,7 @@ URL_AC = 'https://atmosphere.copernicus.eu/'
 SEARCH_CSS_SELECTOR = 'search-toggle.search-label'
 # Test setup
 
-SEARCH_ATTR = 'for' 
+SEARCH_ATTR = 'for'
 SEARCH_FOR = 'search-toggle'
 browser = webdriver.Firefox()
 
