@@ -20,12 +20,18 @@ browser = webdriver.Firefox()
 myPage = CopPage(browser, URL_AC)
 myPage.go()
 search_label = myPage.search_label
-print(search_label)
+# print(search_label)
 # print(search_label.web_element.text)
 assert search_label.web_element.get_attribute(SEARCH_ATTR) == SEARCH_FOR
 search_label.click()
 # search_button = myPage.button(By.CLASS_NAME, SEARCH_CSS_SELECTOR)
 # assert search_button.text == SEARCH_TEXT
 # search_button.click()
+search_input = myPage.search_input
+# search_input.input_text('copernicus')
+myPage.enter_search_text('air copernicus')
+myPage.click_on_search
+# print(myPage.search_submit)
+# myPage.click_on_search
 time.sleep(10)
 browser.quit()

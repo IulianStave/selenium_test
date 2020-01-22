@@ -16,7 +16,8 @@ browser = webdriver.Chrome()
 
 myPage = BasePage(browser, URL_AC)
 myPage.go()
-search_label = myPage.button(By.CLASS_NAME, SEARCH_CSS_SELECTOR)
+search_label_locator = (By.CLASS_NAME, SEARCH_CSS_SELECTOR)
+search_label = myPage.button(search_label_locator)
 # print(search_label)
 # print(search_label.web_element.text)
 assert search_label.web_element.get_attribute(SEARCH_ATTR) == SEARCH_FOR

@@ -7,11 +7,9 @@ TIMEOUT = 10
 
 class BaseElement:
     """Wrapping a Selenium Web Element """
-    def __init__(self, driver, by, value):
+    def __init__(self, driver, locator):
         self.driver = driver
-        self.by = by
-        self.value = value
-        self.locator = (self.by, self.value)
+        self.locator = locator
         self.web_element = None
         self.find()
 
@@ -36,5 +34,9 @@ class BaseElement:
         text = self.web_element.text
         return text
     
+    def input_text(self, txt):
+        self.web_element.clear()
+        self.web_element.send_keys(txt)
+        return None
 
 

@@ -11,10 +11,9 @@ class BasePage:
     def go(self):
         self.driver.get(self.url)
 
-    def button(self, by, value):
+    def button(self, locator):
         # locator = (By.ID, 'b1')
         return BaseElement(
             driver=self.driver,
-            by=by,
-            value=value
+            locator=locator
             )
