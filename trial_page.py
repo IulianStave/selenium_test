@@ -11,7 +11,7 @@ SEARCH_CSS_SELECTOR = 'search-toggle.search-label'
 # Test setup
 
 SEARCH_ATTR = 'for'
-SEARCH_FOR = 'search-toggle'
+SEARCH_FOR = 'search-tggle'
 browser = webdriver.Firefox()
 
 

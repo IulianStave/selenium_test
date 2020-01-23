@@ -42,7 +42,7 @@ class BaseElement:
     def text(self):
         text = self.web_element.text
         return text
-    
+ 
     def input_text(self, txt):
         self.web_element.clear()
         self.web_element.send_keys(txt)
